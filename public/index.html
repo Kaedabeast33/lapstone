@@ -23,11 +23,11 @@
         <!-- <div id = "menuContainer"></div>
         <div id="titleContainer"><p>Kaeden's Crypto Watchlist</p></div>
          -->
-        <nav class="navbar fixed-top bg-dark" style="flex-wrap: nowrap;">
-            <div class="container-fluid navwrapper">
-             <a class="navbar-brand text-light" href="#">Kaeden's Watchlist</a>
-              <div class="search-container">
-                <form  role="search">
+        <nav class="navbar fixed-top bg-dark shadow p-3 mb-5 bg-white" style="flex-wrap: nowrap;">
+            <div class="container-fluid navwrapper d-flex justify-content-center">
+             <a class="navbar-brand" href="#">Kaeden's Watchlist</a>
+              <!-- <div class="search-container"> -->
+                <!-- <form  role="search">
               
                  <div class="autocom-box">
                     <input  type="search" placeholder="Search" aria-label="Search">
@@ -40,7 +40,7 @@
                     <li class="autocom-items">Ethereum</li>
                           </div>
                     <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                 </div>
+                 </div> -->
                 
               </div>
               
@@ -56,13 +56,13 @@
     <main>
      <div class="watchlists">
         <div id="watchlistandsearchContainer">
-        <div class="watchlistContainer table-responsive">
+        <div class="watchlistContainer shadow-lg table-responsive">
            
             <table class="table table-striped watch-table tableBordered">
                
                  
                 
-                <tbody id="watchlisttable1">
+                <tbody id="watchlisttable1" >
                     <h2 id="watchlistInstruction">click on coins to add to watchlist</h2> 
 
                 </tbody>
@@ -83,23 +83,23 @@
         </div>
         <div class="icon"><i class="fa-solid fa-magnifying-glass undisappear" style="position: sticky;
             bottom:40px;"></i></div> 
-        <button class="watchlistRefresher sticky" id ="coinrefresher"onClick="addCoinToWatchlist(this.id)">Refresh</button>
+        <!-- <button class="watchlistRefresher sticky" id ="coinrefresher"onClick="addCoinToWatchlist(this.id)">Refresh</button> -->
         
          </div>
          
      </div>
     </main>
     <button id="coinRefresher" onClick="getCoins()">refresh</button>
-    <footer>
+    <footer class="footer">
         <div id="coinListContainer">
-            <table class="table table-striped table-hover tableBordered">
+            <table class="table sticky table-striped table-hover tableBordered">
                 <thead>
                     <tr>
-                        <th class="col">#</th>
+                        <th class="col">Rank</th>
                         <th class="col">Symbol</th>
                         <th class="col">UUID</th>
                         <th class="col">BTC Price</th>
-                        <th class="col">Rank</th>
+                       
                        
                         <th class="col">Name</th>
                         <th class="col">Price</th>

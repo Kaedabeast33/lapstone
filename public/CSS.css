@@ -6,25 +6,33 @@
 font-size: 12;
 padding: 0px, 0px, 0px, 0px;
 margin: 0px, 0px, 0px, 0px;
-
+position:static;
 }
 
 
 body{
-    background-color: antiquewhite;
+    background-color: #edf6f9;
 }
 
 
 
 /* Header */
+header{
+    box-shadow: 0px,1px,3px rgba(0,0,0,0.5);
+}
 .navbar{
-    background-color: aliceblue;
+    background-color: #006d77!important;
     height: 1in;
     max-height: 1in;
    
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+
+    box-shadow:1px, 2px,5px rgba(0,0,0,0.5) !important;
+
+   
+
 }
 .navwrapper{
     white-space: nowrap;
@@ -34,7 +42,9 @@ body{
 }
 .navbar-brand{
     white-space: nowrap; 
-
+    color: #edf6f9 !important;
+    text-shadow: 0px,1px,3px rgba(0,0,0,0.5);
+    font-size: 33px;
 }
 .btn{
    white-space: nowrap;
@@ -143,7 +153,7 @@ main{
     
     height:100vh;
     width:100;
-    background-color: blanchedalmond;
+    background-color: rgb(250, 239, 224);
 
     display:flex;
     justify-content: center;
@@ -156,9 +166,12 @@ main{
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    background-color:antiquewhite;
+    /* background-color: #ffddd2; */
+
     width:calc((100vw)-(1in));
     height: 100vh;
+    position: static !important;
+    
 }
 .watchlistContainer{
 
@@ -168,6 +181,7 @@ main{
     display:flex;
     justify-content: space-around;
 flex-wrap: wrap;
+position: static !important;
     
 }
 #watchlistandsearchContainer{
@@ -200,7 +214,9 @@ flex-wrap: wrap;
     flex-wrap: wrap;
 
 }
-
+.top-row{
+    
+}
 .disappear1{
     opacity: 0;
     cursor: grab;
@@ -208,6 +224,8 @@ flex-wrap: wrap;
 .watchlisttable1{
     font-size: auto;
     width:350px;
+    display: flex;
+    align-items: flex-start;
 }
 
 #watchlistInstruction{
@@ -218,7 +236,7 @@ flex-wrap: wrap;
 
     text-align: center;
     text-transform: capitalize;
-    font-family:'Courier New', Courier, monospace ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 
@@ -229,4 +247,11 @@ flex-wrap: wrap;
     position: sticky;
     bottom:40px;
     left:0px;
+}
+
+#coinListContainer{
+    position:static !important;
+}
+footer{
+    position: static !important;
 }

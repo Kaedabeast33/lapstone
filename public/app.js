@@ -21,7 +21,7 @@ const deleteCoin = (evt)=>{
     axios.delete(`${baseUrl}/deleteCoins/`,{data:{uuid:evt}})
    .then(res=>{
        console.log(res)
-       watchlist.innerHTML=`      <tr>
+       watchlist.innerHTML=`      <tr class="position-relative top-row">
        <th class="col">#</th>
        <th class="col">Symbol</th>
        <th class="col">UUID</th>
@@ -42,11 +42,11 @@ const deleteCoin = (evt)=>{
     
     watchlist.innerHTML +=`
     <tr class ="addedCoins ${baseId}" id="${uuid}" onClick="deleteCoin(this.id)">
-        <th scope="row">${baseId+1}</td>
+    <td class="col">${rank}</td>
         <td class="col">${symbol}</td>
         <td class="col">${uuid}</td>
         <td class="col">${btcPrice}</td>
-        <td class="col">${rank}</td>
+       
         
         <td class="col">${name}</td>
          <td class="col">${price}</td>
@@ -90,12 +90,12 @@ const addCoinToWatchlist = (evt) =>{
    
     .then(res=>{
        console.log(res)
-       watchlist.innerHTML=`      <tr>
-       <th class="col">#</th>
+       watchlist.innerHTML=`      <tr class="position-relative top-row">
+       <th class="col">Rank</th>
        <th class="col">Symbol</th>
        <th class="col">UUID</th>
        <th class="col">BTC Price</th>
-       <th class="col">Rank</th>
+      
       
        <th class="col">Name</th>
        <th class="col">Price</th>
@@ -112,11 +112,11 @@ const addCoinToWatchlist = (evt) =>{
                 
                 watchlist.innerHTML +=`
                 <tr class ="addedCoins ${baseId}" id="${uuid}" onClick="deleteCoin(this.id)">
-                    <th scope="row">${baseId+1}</td>
+                <td class="col">${rank}</td>
                     <td class="col">${symbol}</td>
                     <td class="col">${uuid}</td>
                     <td class="col">${btcPrice}</td>
-                    <td class="col">${rank}</td>
+                    
                     
                     <td class="col">${name}</td>
                      <td class="col">${price}</td>
@@ -147,11 +147,11 @@ function coinsHandler(coins){
     baseId++
     return `
 <tr class ="addedCoins ${baseId}" id="${uuid}" onClick="addCoinToWatchlist(this.id)">
-    <th class="col">${baseId+1}
+<th class="col">${rank}</th> 
     <th class="col">${symbol}</th>
     <th class="col">${uuid}</th>
     <th class="col">${btcPrice}</th>
-    <th class="col">${rank}</th>
+  
     
     <th class="col">${name}</th>
      <th class="col">${price}</th>
